@@ -1,0 +1,1 @@
+document.getElementById('toggleTheme').onclick=()=>document.body.classList.toggle('dark');const acc=document.getElementsByClassName('accordion-btn');for(let i=0;i<acc.length;i++){acc[i].onclick=()=>{const p=acc[i].nextElementSibling;p.style.display=p.style.display==='block'?'none':'block';};}
