@@ -1,56 +1,127 @@
-nav {
-    display: flex;
-    justify-content: flex-start; /* move nav items to LEFT */
-    align-items: center;
-    padding: 10px 20px;
-    background: #10131a;
-    color: white;
+/* BASE */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f8;
+    color: #222;
+    transition: 0.3s;
+}
+
+/* DARK MODE */
+body.dark {
+    background: #0f1219;
+    color: #eee;
+}
+
+/* SIDEBAR */
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    height: 70px;
-    z-index: 1000;
-}
-
-/* Put logo on left */
-nav .logo {
-    margin-right: 30px;
-    font-weight: bold;
-}
-
-/* Nav list: inline, left-aligned */
-nav ul {
+    width: 230px;
+    height: 100%;
+    background: #10131a;
+    color: white;
+    padding: 30px 20px;
     display: flex;
-    list-style: none;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-/* Nav links */
-nav ul li a {
+.sidebar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 16px;
 }
 
-/* Move dark-mode toggle to far right */
-#toggleTheme {
-    margin-left: auto;
+.sidebar nav ul li a:hover {
+    color: #ffd96f;
+}
+
+/* DARK MODE BUTTON */
+.theme-btn {
+    margin-top: auto;
+    padding: 10px;
     background: none;
+    border: 1px solid #ffd96f;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* PAGE CONTENT (pushed right) */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* HERO SECTION */
+header.hero {
+    background: #1a1d27;
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.btn {
+    background: #ffd96f;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 10px;
+    display: inline-block;
+    color: #10131a;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    border-left: 5px solid #ffd96f;
+    padding-left: 12px;
+    font-size: 26px;
+}
+
+/* TEST CASE ACCORDION */
+.accordion-btn {
+    width: 100%;
+    background: #ddd;
+    padding: 15px;
     border: none;
-    font-size: 22px;
+    margin-top: 10px;
     cursor: pointer;
 }
-body{margin:0;font-family:Arial;background:#f5f5f8;color:#222;} 
-nav{display:flex;justify-content:space-between;padding:10px;background:#10131a;color:white;position:fixed;top:0;left:0;right:0;height:70px;z-index:1000;} 
-nav a{color:white;margin:0 10px;text-decoration:none;} 
-header.hero{text-align:center;padding:200px 20px 120px 20px;background:#1a1d27;color:white;} 
-.btn{background:#ffd96f;padding:10px 20px;border-radius:5px;text-decoration:none;margin:5px;display:inline-block;} 
-.section{padding:80px 20px;max-width:900px;margin:auto;} 
-h2{border-left:5px solid #ffd96f;padding-left:10px;} 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;} 
-.skill-card{background:white;padding:20px;border-left:5px solid #ffd96f;border-radius:6px;} 
-footer{background:#10131a;color:white;text-align:center;padding:20px;margin-top:40px;} 
-.accordion-btn{width:100%;background:#ddd;padding:15px;border:none;font-size:18px;margin-top:10px;cursor:pointer;} 
-.panel{display:none;background:white;padding:10px;border-left:5px solid #ffd96f;}
+
+.panel {
+    display: none;
+    background: white;
+    padding: 15px;
+    border-left: 4px solid #ffd96f;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background: #10131a;
+}
